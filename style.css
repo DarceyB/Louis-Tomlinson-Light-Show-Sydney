@@ -1,0 +1,124 @@
+header{
+    color: black;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    padding: 25px;
+
+}
+
+h1 {
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
+ h2 {
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(255, 83, 83);
+ }
+
+
+body {
+    background-image: url('images/louis-how.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+
+
+        
+}
+.url {cursor: url(myBall.cur),auto;}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    position: sticky;
+    top: 0;
+
+    
+    
+}
+
+.cover {
+    width:100%;
+    
+}
+
+
+button{
+    border-radius: 9999px;
+    text-align: center;
+    box-shadow: none;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:rgb(247, 74, 74);
+    color:bisque;
+    border: rgb(247, 74, 74);
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+
+   
+
+}
+
+#single {
+    position: absolute;
+    right: 50%;
+    bottom: 80px; 
+}
+
+#album {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+
+}
+
+#newsletter {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+
+}
+
+#shop {
+    position: absolute;
+    right: 50%;
+    bottom: 30px;
+
+}
+
+#container {
+    margin-left:center;
+    margin-right:center;
+    width: 980px;
+}
+
+#Section {
+    position: absolute;
+    left: 45%;
+    bottom: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        

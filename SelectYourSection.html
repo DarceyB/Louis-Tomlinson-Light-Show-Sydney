@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Light Show</title>
+        <link rel="stylesheet" href="SelectYourSection.css">
+        <script src="SelectYourSection.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <script>
+        $(document).ready(function() {
+            $('#myForm').submit(function(e) {
+                e.preventDefault();
+
+                var sectionNumber = $('#sectionNumber').val();
+                if(sectionNumber == 20 || sectionNumber == 19 || sectionNumber == 18 || sectionNumber == 1 || sectionNumber == 2 || sectionNumber == 29 || sectionNumber == 28 || sectionNumber == 27 || sectionNumber == 26 || sectionNumber == 25 || sectionNumber == 24 || sectionNumber == 23 || sectionNumber == 84 || sectionNumber == 83 || sectionNumber == 82 || sectionNumber == 81 || sectionNumber == 80 || sectionNumber == 78 || sectionNumber == 79) {
+                    window.location.href = 'green.html';
+                }
+                if(sectionNumber == 3 || sectionNumber == 4 || sectionNumber == 5 || sectionNumber == 6 || sectionNumber == 7 || sectionNumber == 30 || sectionNumber == 31 || sectionNumber == 33 || sectionNumber == 34 || sectionNumber == 35 || sectionNumber == 36 || sectionNumber == 37 || sectionNumber == 38 || sectionNumber == 39 || sectionNumber == 53 || sectionNumber == 54 || sectionNumber == 55 || sectionNumber == 56 || sectionNumber == 57 || sectionNumber == 58 || sectionNumber == 59 || sectionNumber == 60 || sectionNumber == 61) {
+                    window.location.href = 'purple.html';
+                }
+                if(sectionNumber == 8 || sectionNumber == 9 || sectionNumber == 10 || sectionNumber == 11 || sectionNumber == 12 || sectionNumber == 39 || sectionNumber == 40 || sectionNumber == 41 || sectionNumber == 42 || sectionNumber == 43 || sectionNumber == 44 || sectionNumber == 45 || sectionNumber == 62 || sectionNumber == 63 || sectionNumber == 64 || sectionNumber == 65 || sectionNumber == 66 || sectionNumber == 67 || sectionNumber == 68) {
+                    window.location.href ='yellow.html';
+                }
+                if(sectionNumber == "General Admission" || sectionNumber == "GA" || sectionNumber == "Floor" || sectionNumber == "ga" || sectionNumber == "FLOOR") {
+                   const pages = [ 'red.html', 'blue.html', 'yellow.html', 'green.html', 'purple.html' ];
+                     const randomPage = pages[Math.floor(Math.random() * pages.length)];
+                        window.location.href = randomPage;
+                }
+                if(sectionNumber == "General Admission Red" || sectionNumber == "GA Red" || sectionNumber == "Floor Red" || sectionNumber == "ga Red" || sectionNumber == "FLOOR Red") {
+                    window.location.href = 'red.html';
+                }
+                if(sectionNumber == "General Admission Blue" || sectionNumber == "GA Blue" || sectionNumber == "Floor Blue" || sectionNumber == "ga Blue" || sectionNumber == "FLOOR Blue") {
+                    window.location.href = 'blue.html';
+                }
+                else if(sectionNumber) {
+                    alert('You entered section number: ' + sectionNumber);
+                } else {
+                    alert('Please enter a section number.');
+                }
+            });
+           
+        });
+
+    </script>
+
+    <body>
+        <form id="myForm">
+        <h1>Enter Your Section</h1>
+        <h2>for the light show</h2>
+        <h3>to surprise Louis Tomlinson!</h3>
+        <h3>Hold up during "LUCID"</h3>
+        <h3>Don't forget to turn your brightness up</h3>
+        <!-- <h4>if you are in General Admission please enter <em>"GA Red"</em> or <em>"GA Blue"</em> below for your colour</h4> -->
+        <input type="text" id="sectionNumber" placeholder="Section Number">
+        <button id="Enter">Enter</button>  
+        </form>
+
+    </body>
+</html>

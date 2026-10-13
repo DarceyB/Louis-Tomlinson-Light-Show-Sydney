@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Light Show</title>
+        <link rel="stylesheet" href="blue.css">
+        <script src="LightShow.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <script>
+        const audio = document.getElementById("music");
+        const audioContext = new AudioContext();
+        const source = audioContext.createMediaElementSource(audio);
+        const analyser = audioContext.createAnalyser();
+
+        source.connect(analyser);
+        analyser.connect(audioContext.destination);
+
+        analyser.fftSize = 256;
+        const dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+        function animate() {
+
+            analyser.getByteFrequencyData(dataArray);
+            const average = dataArray.reduce((a, b) => a + b, 0) / dataArray.length;
+            
+            if (average > 100) {
+                document.body.style.backgroundColor = "red";
+            } else {
+                 document.body.style.backgroundColor = "blue";
+                }
+                requestAnimationFrame(animate);
+            }
+            audio.addEventListener("play", async () => {
+                await audioContext.resume();
+                animate();
+            });
+
+    </script>
+
+    <body>
+       
+    </body>
+</html>

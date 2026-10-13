@@ -1,0 +1,13 @@
+body {
+    background-color: yellow;
+    
+    animation: flashAnimation 5s infinite linear;
+}
+
+ @keyframes flashAnimation {
+    0% { background-color: yellow; } /* Starting color */
+    50% { background-color: white } /* Flash color (e.g., yellow) */
+    100% { background-color: yellow; } /* Ending color */
+  
+
+}
