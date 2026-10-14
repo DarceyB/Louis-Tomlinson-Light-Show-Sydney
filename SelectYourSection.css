@@ -38,7 +38,7 @@ input {
     transform: translate(-50%, -50%);
     margin: 20px auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 25px;
     padding: 5px 20px;
     background-color: whitesmoke;
     border: 2px solid black;
@@ -52,7 +52,7 @@ input {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 35px;
     padding: 5px 20px;
     background-color: rgb(250, 217, 0);
     border: 2px solid black;
