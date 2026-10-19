@@ -1,35 +1,55 @@
-header{
+/* header{
     color: black;
     text-align: center;
     max-width: 100%;
     height: auto;
     padding: 25px;
 
-}
+} */
+ html {
+    min-height: 100%;
+    background-color: #222;
+
+ }
 
 h1 {
     font-size: 30px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(255, 255, 255);
+    color: white;
+    margin: 0;
 }
  h2 {
     font-size: 25px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:rgb(255, 83, 83);
+    margin: 10px 0 20px;
  }
 
 
 body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
     background-image: url('images/louis-how.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
+    background-color:#222;
     text-align: center;
-
-
         
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+        
+    }
+}
+
 .url {cursor: url(myBall.cur),auto;}
 
 .menu {
@@ -50,23 +70,65 @@ body {
     
 }
 
+#container {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#Section {
+    position: static;
+    margin: 15px auto 0;
+}
+
+@media screen and(max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    button {
+        width: 280px;
+        max-width: 100%;
+        height: 55px;
+        font-size: 17px;
+    }
+}
+
 
 button{
-    border-radius: 9999px;
-    text-align: center;
-    box-shadow: none;
-    font-weight: 1000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color:rgb(247, 74, 74);
-    color:bisque;
-    border: rgb(247, 74, 74);
-    padding: 10px;
+    position: static;
+    display: block;
     width: 250px;
-    height: 50px;
+    max-width: 90%;
+    height: 55px;
+    margin: 20px auto 0;
+    background-color:rgb(247, 74, 74);
+    border: 2px solid rgb(247, 74, 74);
+    border-radius: 9999px;
+    color:bisque;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-   
-
+button:hover {
+    background-color: rgb(220, 55, 55);
+    transform: scale(1.05);
 }
 
 #single {
@@ -96,7 +158,7 @@ button{
 
 }
 
-#container {
+/* #container {
     margin-left:center;
     margin-right:center;
     width: 980px;
@@ -106,7 +168,7 @@ button{
     position: absolute;
     left: 40%;
     bottom: 45%;
-}
+} */
 
 
 
