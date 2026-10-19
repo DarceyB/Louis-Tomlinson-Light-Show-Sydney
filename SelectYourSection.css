@@ -62,3 +62,7 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+.text-box button:hover {
+    background-color: rgb(253, 226, 50);
+    transform: scale(1.05);
+}
