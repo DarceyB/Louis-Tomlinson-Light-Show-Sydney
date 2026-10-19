@@ -11,7 +11,7 @@ h1 {
     position: absolute;
     text-align: center;
     top: 25%;
-    left: 30%;
+    left: 40%;
     transform: translate(-25%, -25%);
 }
 
@@ -23,7 +23,8 @@ h2 {
     text-align: center;
     margin-top: 5%;
     top: 30%;
-    left: 30%;
+    left: 40%;
+    transform: translate(-25%, -5%);
 }
 
 h3 {
@@ -33,7 +34,7 @@ h3 {
     position: absolute;
     text-align: center;
     top: 35%;
-    left: 30%;
+    left: 40%;
     transform: translate(-25%, -5%);
 }
 
@@ -45,8 +46,8 @@ h4 {
     text-align: center;
     margin-top: 5%;
     top: 40%;
-    left: 30%;
-    
+    left: 40%;
+    transform: translate(-25%, -5%);
 }
 
 input {
