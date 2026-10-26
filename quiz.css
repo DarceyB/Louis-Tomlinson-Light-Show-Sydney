@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background-color: rgb(247, 74, 74);
+    color: rgb(247, 74, 74);
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: bisque;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(56, 54, 54, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.question:hover {
+    background-color: rgb(247, 74, 74);
+    color: #454141;
+    cursor: pointer;
+}
+
+.input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    max-width: 250px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.question p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+
+}
+
+input[type="text"]::placeholder {
+    font-weight: bold;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff7d7d;
+    box-shadow: 0 0 5px #ff7d7d;
+}
+
+
+button {
+    position: static;
+    display:inline-block;
+    width: 250px;
+    max-width: 90%;
+    height: 50px;
+    margin: 20px auto 0;
+    background-color:rgb(247, 74, 74);
+    border: 2px solid rgb(247, 74, 74);
+    border-radius: 9999px;
+    color:bisque;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff7d7d;
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 2px solid #ff7d7d;
+    outline-offset: 4px;
+}
+
+#results {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(247, 74, 74);
+}
+
+#result h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .quiz-container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .question {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
