@@ -9,9 +9,14 @@
     </head>
 
     <body>
+
         <div class="quiz-container">
             <h1>Louis Tomlinson Quiz</h1>
             <form id="quizForm">
+                <div class="question">
+                    <p>Enter your name:</p>
+                    <input type="text" id="playerName" name="playerName" placeholder="Your name" required>
+                </div>
                 <div class="question">
                     <p>1. What is the name of Louis Tomlinson's debut solo album?</p>
                     <input type="text" name="question1" required>
@@ -93,6 +98,10 @@
                     <input type="text" name="question20" required>
                 </div>
                 <button type="submit">Submit</button>
+                <button type="button" id="leaderboardBtn">
+                    View Leaderboard
+                </button>
+
             </form>
             <div id="result"></div>
         </div>
@@ -133,7 +142,30 @@
                         }
                     });
 
-                    $('#result').html('<h2>Your Score: ' + score + '/20</h2>');
+                    let playerName = $('#playerName').val().trim();
+                    if (playerName === '') {
+                        alert('Please enter your name!');
+                        return;
+                    }
+                    $('#result').html(
+                        '<h2>Well done, ' + $('<div>').text(playerName).html() +
+                            '! Your Score: ' + score + '/20</h2>');
+                            
+                    // Save the name and score
+                    let scores = JSON.parse(localStorage.getItem('leaderboardScores')
+                ) || [];
+                scores.push({
+                    name: playerName,
+                    score: score
+                });
+                localStorage.setItem(
+                    'leaderboardScores',
+                    JSON.stringify(scores)
+                );
+            });
+
+                $('#leaderboardBtn').click(function() {
+                    window.open('leaderboard.html', '_blank');
                 });
             });
         </script>
