@@ -51,7 +51,7 @@ input[type="text"] {
     background-color: #cb333b;
     border: 2px solid bisque;
     border-radius: 9999px;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
 }
