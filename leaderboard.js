@@ -18,4 +18,6 @@ $(document).ready(function () {
         item.text(entry.name + ' — ' + entry.score + '/20');
         leaderboard.append(item);
     });
+
+
 });

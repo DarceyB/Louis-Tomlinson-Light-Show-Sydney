@@ -117,6 +117,10 @@ button:focus-visible {
     font-size: 24px;
     margin-bottom: 10px;
 }
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 
 
 /* Mobile-friendly layout */
@@ -145,4 +149,6 @@ button:focus-visible {
         flex-direction: column;
         align-items: center;
     }
+
+    
 }

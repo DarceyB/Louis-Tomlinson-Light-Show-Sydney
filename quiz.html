@@ -108,8 +108,21 @@
 
         <script>
             $(document).ready(function() {
+                if (localStorage.getItem('quizSubmitted')) {
+                        $('#quizForm button[type="submit"]').prop('disabled', true);
+                         $('#result').html('<p>You have already completed this quiz on this browser.</p>'
+
+                         );
+                        }
                 $('#quizForm').submit(function(e) {
                     e.preventDefault();
+                    if (localStorage.getItem('quizSubmitted')) {
+                         $('#result').html(
+                            '<p>You have already submitted this quiz!</p>'
+                        );
+                        return;
+                    }
+                    
                     var score = 0;
                     var answers = {
                         question1: "Walls",
@@ -162,6 +175,11 @@
                     'leaderboardScores',
                     JSON.stringify(scores)
                 );
+                // Remember that this browser has submitted
+                localStorage.setItem('quizSubmitted', 'true');
+                
+                // Disable the submit button
+                $('#quizForm button[type="submit"]').prop('disabled', true);
             });
 
                 $('#leaderboardBtn').click(function() {
