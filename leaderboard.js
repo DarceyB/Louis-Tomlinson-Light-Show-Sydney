@@ -9,15 +9,19 @@ $(document).ready(function () {
     leaderboard.empty();
 
     if (scores.length === 0) {
-        leaderboard.append('<li>No scores yet. Play the quiz first!</li>');
-        return;
+        leaderboard.append(
+            '<li>No scores yet. Play the quiz first!</li>'
+        );
+    } else {
+        scores.forEach(function (entry) {
+            const item = $('<li>');
+            item.text(entry.name + ' — ' + entry.score + '/20');
+            leaderboard.append(item);
+        });
     }
-
-    scores.forEach(function (entry) {
-        const item = $('<li>');
-        item.text(entry.name + ' — ' + entry.score + '/20');
-        leaderboard.append(item);
-    });
-
-
 });
+
+//function resetLeaderboard() {
+//localStorage.removeItem('leaderboardScores');
+// /location.reload();
+//}
